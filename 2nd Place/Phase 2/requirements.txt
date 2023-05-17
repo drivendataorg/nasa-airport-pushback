@@ -1,0 +1,10 @@
+catboost
+flwr
+numpy
+pandas
+scikit_learn
+torch
+torchmetrics
+torchsummary
+tqdm
+flwr[simulation]

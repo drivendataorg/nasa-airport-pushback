@@ -1,0 +1,1318 @@
+# Here you can define all your data sets by using simple YAML syntax.
+#
+# Documentation for this file format can be found in "The Data Catalog"
+# Link: https://kedro.readthedocs.io/en/stable/data/data_catalog.html
+
+sub_format:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/submission_format.csv
+  load_args:
+    parse_dates: ["timestamp"]
+
+submission:
+  type: pandas.CSVDataSet
+  filepath: data/07_model_output/submission.csv
+
+# Perimeters
+perimeter_katl:
+  type: pandas.ParquetDataSet
+  filepath: data/04_feature/perimeter_katl.pq
+
+perimeter_kclt:
+  type: pandas.ParquetDataSet
+  filepath: data/04_feature/perimeter_kclt.pq
+
+perimeter_kden:
+  type: pandas.ParquetDataSet
+  filepath: data/04_feature/perimeter_kden.pq
+
+perimeter_kdfw:
+  type: pandas.ParquetDataSet
+  filepath: data/04_feature/perimeter_kdfw.pq
+
+perimeter_kjfk:
+  type: pandas.ParquetDataSet
+  filepath: data/04_feature/perimeter_kjfk.pq
+
+perimeter_kmem:
+  type: pandas.ParquetDataSet
+  filepath: data/04_feature/perimeter_kmem.pq
+
+perimeter_kmia:
+  type: pandas.ParquetDataSet
+  filepath: data/04_feature/perimeter_kmia.pq
+
+perimeter_kord:
+  type: pandas.ParquetDataSet
+  filepath: data/04_feature/perimeter_kord.pq
+
+perimeter_kphx:
+  type: pandas.ParquetDataSet
+  filepath: data/04_feature/perimeter_kphx.pq
+
+perimeter_ksea:
+  type: pandas.ParquetDataSet
+  filepath: data/04_feature/perimeter_ksea.pq
+
+# Config raw data
+raw_katl_config:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/KATL/KATL_config.csv
+  load_args:
+    parse_dates: ["timestamp"]
+
+raw_kclt_config:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/KCLT/KCLT_config.csv
+  load_args:
+    parse_dates: ["timestamp"]
+
+raw_kden_config:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/KDEN/KDEN_config.csv
+  load_args:
+    parse_dates: ["timestamp"]
+
+raw_kdfw_config:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/KDFW/KDFW_config.csv
+  load_args:
+    parse_dates: ["timestamp"]
+
+raw_kjfk_config:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/KJFK/KJFK_config.csv
+  load_args:
+    parse_dates: ["timestamp"]
+
+raw_kmem_config:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/KMEM/KMEM_config.csv
+  load_args:
+    parse_dates: ["timestamp"]
+
+raw_kmia_config:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/KMIA/KMIA_config.csv
+  load_args:
+    parse_dates: ["timestamp"]
+
+raw_kord_config:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/KORD/KORD_config.csv
+  load_args:
+    parse_dates: ["timestamp"]
+
+raw_kphx_config:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/KPHX/KPHX_config.csv
+  load_args:
+    parse_dates: ["timestamp"]
+
+raw_ksea_config:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/KSEA/KSEA_config.csv
+  load_args:
+    parse_dates: ["timestamp"]
+
+# Config features
+features_katl_config:
+  type: pandas.ParquetDataSet
+  filepath: data/04_feature/feature_katl_config.pq
+
+features_kclt_config:
+  type: pandas.ParquetDataSet
+  filepath: data/04_feature/feature_kclt_config.pq
+
+features_kden_config:
+  type: pandas.ParquetDataSet
+  filepath: data/04_feature/feature_kden_config.pq
+
+features_kdfw_config:
+  type: pandas.ParquetDataSet
+  filepath: data/04_feature/feature_kdfw_config.pq
+
+features_kjfk_config:
+  type: pandas.ParquetDataSet
+  filepath: data/04_feature/feature_kjfk_config.pq
+
+features_kmem_config:
+  type: pandas.ParquetDataSet
+  filepath: data/04_feature/feature_kmem_config.pq
+
+features_kmia_config:
+  type: pandas.ParquetDataSet
+  filepath: data/04_feature/feature_kmia_config.pq
+
+features_kord_config:
+  type: pandas.ParquetDataSet
+  filepath: data/04_feature/feature_kord_config.pq
+
+features_kphx_config:
+  type: pandas.ParquetDataSet
+  filepath: data/04_feature/feature_kphx_config.pq
+
+features_ksea_config:
+  type: pandas.ParquetDataSet
+  filepath: data/04_feature/feature_ksea_config.pq
+
+# Raw standtimes
+raw_katl_standtimes:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/KATL/KATL_standtimes.csv
+  load_args:
+    parse_dates: ["timestamp", "departure_stand_actual_time"]
+
+raw_kclt_standtimes:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/KCLT/KCLT_standtimes.csv
+  load_args:
+    parse_dates: ["timestamp", "departure_stand_actual_time"]
+
+raw_kden_standtimes:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/KDEN/KDEN_standtimes.csv
+  load_args:
+    parse_dates: ["timestamp", "departure_stand_actual_time"]
+
+raw_kdfw_standtimes:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/KDFW/KDFW_standtimes.csv
+  load_args:
+    parse_dates: ["timestamp", "departure_stand_actual_time"]
+
+raw_kjfk_standtimes:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/KJFK/KJFK_standtimes.csv
+  load_args:
+    parse_dates: ["timestamp", "departure_stand_actual_time"]
+
+raw_kmem_standtimes:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/KMEM/KMEM_standtimes.csv
+  load_args:
+    parse_dates: ["timestamp", "departure_stand_actual_time"]
+
+raw_kmia_standtimes:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/KMIA/KMIA_standtimes.csv
+  load_args:
+    parse_dates: ["timestamp", "departure_stand_actual_time"]
+
+raw_kord_standtimes:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/KORD/KORD_standtimes.csv
+  load_args:
+    parse_dates: ["timestamp", "departure_stand_actual_time"]
+
+raw_kphx_standtimes:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/KPHX/KPHX_standtimes.csv
+  load_args:
+    parse_dates: ["timestamp", "departure_stand_actual_time"]
+
+raw_ksea_standtimes:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/KSEA/KSEA_standtimes.csv
+  load_args:
+    parse_dates: ["timestamp", "departure_stand_actual_time"]
+
+# Standtime features
+features_katl_standtimes:
+  type: pandas.ParquetDataSet
+  filepath: data/04_feature/features_katl_standtimes.pq
+
+features_kclt_standtimes:
+  type: pandas.ParquetDataSet
+  filepath: data/04_feature/features_kclt_standtimes.pq
+
+features_kden_standtimes:
+  type: pandas.ParquetDataSet
+  filepath: data/04_feature/features_kden_standtimes.pq
+
+features_kdfw_standtimes:
+  type: pandas.ParquetDataSet
+  filepath: data/04_feature/features_kdfw_standtimes.pq
+
+features_kjfk_standtimes:
+  type: pandas.ParquetDataSet
+  filepath: data/04_feature/features_kjfk_standtimes.pq
+
+features_kmem_standtimes:
+  type: pandas.ParquetDataSet
+  filepath: data/04_feature/features_kmem_standtimes.pq
+
+features_kmia_standtimes:
+  type: pandas.ParquetDataSet
+  filepath: data/04_feature/features_kmia_standtimes.pq
+
+features_kord_standtimes:
+  type: pandas.ParquetDataSet
+  filepath: data/04_feature/features_kord_standtimes.pq
+
+features_kphx_standtimes:
+  type: pandas.ParquetDataSet
+  filepath: data/04_feature/features_kphx_standtimes.pq
+
+features_ksea_standtimes:
+  type: pandas.ParquetDataSet
+  filepath: data/04_feature/features_ksea_standtimes.pq
+
+# Targets
+targets_katl:
+  type: pandas.ParquetDataSet
+  filepath: data/04_feature/targets_katl.pq
+
+targets_kclt:
+  type: pandas.ParquetDataSet
+  filepath: data/04_feature/targets_kclt.pq
+
+targets_kden:
+  type: pandas.ParquetDataSet
+  filepath: data/04_feature/targets_kden.pq
+
+targets_kdfw:
+  type: pandas.ParquetDataSet
+  filepath: data/04_feature/targets_kdfw.pq
+
+targets_kjfk:
+  type: pandas.ParquetDataSet
+  filepath: data/04_feature/targets_kjfk.pq
+
+targets_kmem:
+  type: pandas.ParquetDataSet
+  filepath: data/04_feature/targets_kmem.pq
+
+targets_kmia:
+  type: pandas.ParquetDataSet
+  filepath: data/04_feature/targets_kmia.pq
+
+targets_kord:
+  type: pandas.ParquetDataSet
+  filepath: data/04_feature/targets_kord.pq
+
+targets_kphx:
+  type: pandas.ParquetDataSet
+  filepath: data/04_feature/targets_kphx.pq
+
+targets_ksea:
+  type: pandas.ParquetDataSet
+  filepath: data/04_feature/targets_ksea.pq
+
+
+
+# Master tables
+master_katl:
+  type: pandas.ParquetDataSet
+  filepath: data/05_model_input/master_katl.pq
+
+master_kclt:
+  type: pandas.ParquetDataSet
+  filepath: data/05_model_input/master_kclt.pq
+
+master_kden:
+  type: pandas.ParquetDataSet
+  filepath: data/05_model_input/master_kden.pq
+
+master_kdfw:
+  type: pandas.ParquetDataSet
+  filepath: data/05_model_input/master_kdfw.pq
+
+master_kjfk:
+  type: pandas.ParquetDataSet
+  filepath: data/05_model_input/master_kjfk.pq
+
+master_kmem:
+  type: pandas.ParquetDataSet
+  filepath: data/05_model_input/master_kmem.pq
+
+master_kmia:
+  type: pandas.ParquetDataSet
+  filepath: data/05_model_input/master_kmia.pq
+
+master_kord:
+  type: pandas.ParquetDataSet
+  filepath: data/05_model_input/master_kord.pq
+
+master_kphx:
+  type: pandas.ParquetDataSet
+  filepath: data/05_model_input/master_kphx.pq
+
+master_ksea:
+  type: pandas.ParquetDataSet
+  filepath: data/05_model_input/master_ksea.pq
+
+global_master:
+  type: pandas.ParquetDataSet
+  filepath: data/05_model_input/global_master.pq
+
+
+# Raw ETD
+raw_katl_etd:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/KATL/KATL_etd.csv
+  load_args:
+    parse_dates: ["timestamp", "departure_runway_estimated_time"]
+
+raw_kclt_etd:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/KCLT/KCLT_etd.csv
+  load_args:
+    parse_dates: ["timestamp", "departure_runway_estimated_time"]
+
+raw_kden_etd:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/KDEN/KDEN_etd.csv
+  load_args:
+    parse_dates: ["timestamp", "departure_runway_estimated_time"]
+
+raw_kdfw_etd:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/KDFW/KDFW_etd.csv
+  load_args:
+    parse_dates: ["timestamp", "departure_runway_estimated_time"]
+
+raw_kjfk_etd:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/KJFK/KJFK_etd.csv
+  load_args:
+    parse_dates: ["timestamp", "departure_runway_estimated_time"]
+
+raw_kmem_etd:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/KMEM/KMEM_etd.csv
+  load_args:
+    parse_dates: ["timestamp", "departure_runway_estimated_time"]
+
+raw_kmia_etd:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/KMIA/KMIA_etd.csv
+  load_args:
+    parse_dates: ["timestamp", "departure_runway_estimated_time"]
+
+raw_kord_etd:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/KORD/KORD_etd.csv
+  load_args:
+    parse_dates: ["timestamp", "departure_runway_estimated_time"]
+
+raw_kphx_etd:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/KPHX/KPHX_etd.csv
+  load_args:
+    parse_dates: ["timestamp", "departure_runway_estimated_time"]
+
+raw_ksea_etd:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/KSEA/KSEA_etd.csv
+  load_args:
+    parse_dates: ["timestamp", "departure_runway_estimated_time"]
+
+# Features ETD
+features_katl_etd:
+  type: pandas.ParquetDataSet
+  filepath: data/04_feature/features_katl_etd.pq
+
+features_kclt_etd:
+  type: pandas.ParquetDataSet
+  filepath: data/04_feature/features_kclt_etd.pq
+
+features_kden_etd:
+  type: pandas.ParquetDataSet
+  filepath: data/04_feature/features_kden_etd.pq
+
+features_kdfw_etd:
+  type: pandas.ParquetDataSet
+  filepath: data/04_feature/features_kdfw_etd.pq
+
+features_kjfk_etd:
+  type: pandas.ParquetDataSet
+  filepath: data/04_feature/features_kjfk_etd.pq
+
+features_kmem_etd:
+  type: pandas.ParquetDataSet
+  filepath: data/04_feature/features_kmem_etd.pq
+
+features_kmia_etd:
+  type: pandas.ParquetDataSet
+  filepath: data/04_feature/features_kmia_etd.pq
+
+features_kord_etd:
+  type: pandas.ParquetDataSet
+  filepath: data/04_feature/features_kord_etd.pq
+
+features_kphx_etd:
+  type: pandas.ParquetDataSet
+  filepath: data/04_feature/features_kphx_etd.pq
+
+features_ksea_etd:
+  type: pandas.ParquetDataSet
+  filepath: data/04_feature/features_ksea_etd.pq
+
+
+# Models
+katl_model_v0:
+  type: pushback_nasa.extras.datasets.catboost_dataset.CatBoostModel
+  filepath: data/06_models/katl_model_v0
+
+kclt_model_v0:
+  type: pushback_nasa.extras.datasets.catboost_dataset.CatBoostModel
+  filepath: data/06_models/kclt_model_v0
+
+kden_model_v0:
+  type: pushback_nasa.extras.datasets.catboost_dataset.CatBoostModel
+  filepath: data/06_models/kden_model_v0
+
+kdfw_model_v0:
+  type: pushback_nasa.extras.datasets.catboost_dataset.CatBoostModel
+  filepath: data/06_models/kdfw_model_v0
+
+kjfk_model_v0:
+  type: pushback_nasa.extras.datasets.catboost_dataset.CatBoostModel
+  filepath: data/06_models/kjfk_model_v0
+
+kmem_model_v0:
+  type: pushback_nasa.extras.datasets.catboost_dataset.CatBoostModel
+  filepath: data/06_models/kmem_model_v0
+
+kmia_model_v0:
+  type: pushback_nasa.extras.datasets.catboost_dataset.CatBoostModel
+  filepath: data/06_models/kmia_model_v0
+
+kord_model_v0:
+  type: pushback_nasa.extras.datasets.catboost_dataset.CatBoostModel
+  filepath: data/06_models/kord_model_v0
+
+kphx_model_v0:
+  type: pushback_nasa.extras.datasets.catboost_dataset.CatBoostModel
+  filepath: data/06_models/kphx_model_v0
+
+ksea_model_v0:
+  type: pushback_nasa.extras.datasets.catboost_dataset.CatBoostModel
+  filepath: data/06_models/ksea_model_v0
+
+katl_model_v1:
+  type: pushback_nasa.extras.datasets.catboost_dataset.CatBoostModel
+  filepath: data/06_models/katl_model_v1
+
+kclt_model_v1:
+  type: pushback_nasa.extras.datasets.catboost_dataset.CatBoostModel
+  filepath: data/06_models/kclt_model_v1
+
+kden_model_v1:
+  type: pushback_nasa.extras.datasets.catboost_dataset.CatBoostModel
+  filepath: data/06_models/kden_model_v1
+
+kdfw_model_v1:
+  type: pushback_nasa.extras.datasets.catboost_dataset.CatBoostModel
+  filepath: data/06_models/kdfw_model_v1
+
+kjfk_model_v1:
+  type: pushback_nasa.extras.datasets.catboost_dataset.CatBoostModel
+  filepath: data/06_models/kjfk_model_v1
+
+kmem_model_v1:
+  type: pushback_nasa.extras.datasets.catboost_dataset.CatBoostModel
+  filepath: data/06_models/kmem_model_v1
+
+kmia_model_v1:
+  type: pushback_nasa.extras.datasets.catboost_dataset.CatBoostModel
+  filepath: data/06_models/kmia_model_v1
+
+kord_model_v1:
+  type: pushback_nasa.extras.datasets.catboost_dataset.CatBoostModel
+  filepath: data/06_models/kord_model_v1
+
+kphx_model_v1:
+  type: pushback_nasa.extras.datasets.catboost_dataset.CatBoostModel
+  filepath: data/06_models/kphx_model_v1
+
+ksea_model_v1:
+  type: pushback_nasa.extras.datasets.catboost_dataset.CatBoostModel
+  filepath: data/06_models/ksea_model_v1
+
+katl_model_v2:
+  type: pushback_nasa.extras.datasets.catboost_dataset.CatBoostModel
+  filepath: data/06_models/katl_model_v2
+
+kclt_model_v2:
+  type: pushback_nasa.extras.datasets.catboost_dataset.CatBoostModel
+  filepath: data/06_models/kclt_model_v2
+
+kden_model_v2:
+  type: pushback_nasa.extras.datasets.catboost_dataset.CatBoostModel
+  filepath: data/06_models/kden_model_v2
+
+kdfw_model_v2:
+  type: pushback_nasa.extras.datasets.catboost_dataset.CatBoostModel
+  filepath: data/06_models/kdfw_model_v2
+
+kjfk_model_v2:
+  type: pushback_nasa.extras.datasets.catboost_dataset.CatBoostModel
+  filepath: data/06_models/kjfk_model_v2
+
+kmem_model_v2:
+  type: pushback_nasa.extras.datasets.catboost_dataset.CatBoostModel
+  filepath: data/06_models/kmem_model_v2
+
+kmia_model_v2:
+  type: pushback_nasa.extras.datasets.catboost_dataset.CatBoostModel
+  filepath: data/06_models/kmia_model_v2
+
+kord_model_v2:
+  type: pushback_nasa.extras.datasets.catboost_dataset.CatBoostModel
+  filepath: data/06_models/kord_model_v2
+
+kphx_model_v2:
+  type: pushback_nasa.extras.datasets.catboost_dataset.CatBoostModel
+  filepath: data/06_models/kphx_model_v2
+
+ksea_model_v2:
+  type: pushback_nasa.extras.datasets.catboost_dataset.CatBoostModel
+  filepath: data/06_models/ksea_model_v2
+
+global_model:
+  type: pushback_nasa.extras.datasets.catboost_dataset.CatBoostModel
+  filepath: data/06_models/global_model
+
+# Moment features
+features_katl_moment:
+  type: pandas.ParquetDataSet
+  filepath: data/04_feature/features_katl_moment.pq
+
+features_kclt_moment:
+  type: pandas.ParquetDataSet
+  filepath: data/04_feature/features_kclt_moment.pq
+
+features_kden_moment:
+  type: pandas.ParquetDataSet
+  filepath: data/04_feature/features_kden_moment.pq
+
+features_kdfw_moment:
+  type: pandas.ParquetDataSet
+  filepath: data/04_feature/features_kdfw_moment.pq
+
+features_kjfk_moment:
+  type: pandas.ParquetDataSet
+  filepath: data/04_feature/features_kjfk_moment.pq
+
+features_kmem_moment:
+  type: pandas.ParquetDataSet
+  filepath: data/04_feature/features_kmem_moment.pq
+
+features_kmia_moment:
+  type: pandas.ParquetDataSet
+  filepath: data/04_feature/features_kmia_moment.pq
+
+features_kord_moment:
+  type: pandas.ParquetDataSet
+  filepath: data/04_feature/features_kord_moment.pq
+
+features_kphx_moment:
+  type: pandas.ParquetDataSet
+  filepath: data/04_feature/features_kphx_moment.pq
+
+features_ksea_moment:
+  type: pandas.ParquetDataSet
+  filepath: data/04_feature/features_ksea_moment.pq
+
+
+# Weather features
+features_katl_lamp:
+  type: pandas.ParquetDataSet
+  filepath: data/04_feature/features_katl_lamp.pq
+
+features_kclt_lamp:
+  type: pandas.ParquetDataSet
+  filepath: data/04_feature/features_kclt_lamp.pq
+
+features_kden_lamp:
+  type: pandas.ParquetDataSet
+  filepath: data/04_feature/features_kden_lamp.pq
+
+features_kdfw_lamp:
+  type: pandas.ParquetDataSet
+  filepath: data/04_feature/features_kdfw_lamp.pq
+
+features_kjfk_lamp:
+  type: pandas.ParquetDataSet
+  filepath: data/04_feature/features_kjfk_lamp.pq
+
+features_kmem_lamp:
+  type: pandas.ParquetDataSet
+  filepath: data/04_feature/features_kmem_lamp.pq
+
+features_kmia_lamp:
+  type: pandas.ParquetDataSet
+  filepath: data/04_feature/features_kmia_lamp.pq
+
+features_kord_lamp:
+  type: pandas.ParquetDataSet
+  filepath: data/04_feature/features_kord_lamp.pq
+
+features_kphx_lamp:
+  type: pandas.ParquetDataSet
+  filepath: data/04_feature/features_kphx_lamp.pq
+
+features_ksea_lamp:
+  type: pandas.ParquetDataSet
+  filepath: data/04_feature/features_ksea_lamp.pq
+
+
+# RAW LAMP
+raw_katl_lamp:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/KATL/KATL_lamp.csv
+  load_args:
+    parse_dates: ["timestamp", "forecast_timestamp"]
+
+raw_kclt_lamp:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/KCLT/KCLT_lamp.csv
+  load_args:
+    parse_dates: [ "timestamp", "forecast_timestamp"]
+
+raw_kden_lamp:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/KDEN/KDEN_lamp.csv
+  load_args:
+    parse_dates: [ "timestamp", "forecast_timestamp"]
+
+raw_kdfw_lamp:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/KDFW/KDFW_lamp.csv
+  load_args:
+    parse_dates: [ "timestamp", "forecast_timestamp"]
+
+raw_kjfk_lamp:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/KJFK/KJFK_lamp.csv
+  load_args:
+    parse_dates: [ "timestamp", "forecast_timestamp"]
+
+raw_kmem_lamp:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/KMEM/KMEM_lamp.csv
+  load_args:
+    parse_dates: [ "timestamp", "forecast_timestamp"]
+
+raw_kmia_lamp:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/KMIA/KMIA_lamp.csv
+  load_args:
+    parse_dates: [ "timestamp", "forecast_timestamp"]
+
+raw_kord_lamp:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/KORD/KORD_lamp.csv
+  load_args:
+    parse_dates: [ "timestamp", "forecast_timestamp"]
+
+raw_kphx_lamp:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/KPHX/KPHX_lamp.csv
+  load_args:
+    parse_dates: [ "timestamp", "forecast_timestamp"]
+
+raw_ksea_lamp:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/KSEA/KSEA_lamp.csv
+  load_args:
+    parse_dates: [ "timestamp", "forecast_timestamp"]
+
+
+# Feature contributions
+katl_featimps:
+  type: pandas.CSVDataSet
+  filepath: data/08_reporting/katl_featimps.csv
+  save_args:
+    sep: ";"
+    decimal: ","
+
+kclt_featimps:
+  type: pandas.CSVDataSet
+  filepath: data/08_reporting/kclt_featimps.csv
+  save_args:
+    sep: ";"
+    decimal: ","
+
+kden_featimps:
+  type: pandas.CSVDataSet
+  filepath: data/08_reporting/kden_featimps.csv
+  save_args:
+    sep: ";"
+    decimal: ","
+
+kdfw_featimps:
+  type: pandas.CSVDataSet
+  filepath: data/08_reporting/kdfw_featimps.csv
+  save_args:
+    sep: ";"
+    decimal: ","
+
+kjfk_featimps:
+  type: pandas.CSVDataSet
+  filepath: data/08_reporting/kjfk_featimps.csv
+  save_args:
+    sep: ";"
+    decimal: ","
+
+kmem_featimps:
+  type: pandas.CSVDataSet
+  filepath: data/08_reporting/kmem_featimps.csv
+  save_args:
+    sep: ";"
+    decimal: ","
+
+kmia_featimps:
+  type: pandas.CSVDataSet
+  filepath: data/08_reporting/kmia_featimps.csv
+  save_args:
+    sep: ";"
+    decimal: ","
+
+kord_featimps:
+  type: pandas.CSVDataSet
+  filepath: data/08_reporting/kord_featimps.csv
+  save_args:
+    sep: ";"
+    decimal: ","
+
+kphx_featimps:
+  type: pandas.CSVDataSet
+  filepath: data/08_reporting/kphx_featimps.csv
+  save_args:
+    sep: ";"
+    decimal: ","
+
+ksea_featimps:
+  type: pandas.CSVDataSet
+  filepath: data/08_reporting/ksea_featimps.csv
+  save_args:
+    sep: ";"
+    decimal: ","
+
+
+
+# First position
+raw_katl_first_position:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/KATL/KATL_first_position.csv
+  load_args:
+    parse_dates: ["timestamp"]
+
+raw_kclt_first_position:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/KCLT/KCLT_first_position.csv
+  load_args:
+    parse_dates: ["timestamp"]
+
+raw_kden_first_position:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/KDEN/KDEN_first_position.csv
+  load_args:
+    parse_dates: ["timestamp"]
+
+raw_kdfw_first_position:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/KDFW/KDFW_first_position.csv
+  load_args:
+    parse_dates: ["timestamp"]
+
+raw_kjfk_first_position:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/KJFK/KJFK_first_position.csv
+  load_args:
+    parse_dates: ["timestamp"]
+
+raw_kmem_first_position:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/KMEM/KMEM_first_position.csv
+  load_args:
+    parse_dates: ["timestamp"]
+
+raw_kmia_first_position:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/KMIA/KMIA_first_position.csv
+  load_args:
+    parse_dates: ["timestamp"]
+
+raw_kord_first_position:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/KORD/KORD_first_position.csv
+  load_args:
+    parse_dates: ["timestamp"]
+
+raw_kphx_first_position:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/KPHX/KPHX_first_position.csv
+  load_args:
+    parse_dates: ["timestamp"]
+
+raw_ksea_first_position:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/KSEA/KSEA_first_position.csv
+  load_args:
+    parse_dates: ["timestamp"]
+
+
+# Raw MFS
+raw_katl_mfs:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/KATL/KATL_mfs.csv
+
+raw_kclt_mfs:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/KCLT/KCLT_mfs.csv
+
+raw_kden_mfs:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/KDEN/KDEN_mfs.csv
+
+raw_kdfw_mfs:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/KDFW/KDFW_mfs.csv
+
+raw_kjfk_mfs:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/KJFK/KJFK_mfs.csv
+
+raw_kmem_mfs:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/KMEM/KMEM_mfs.csv
+
+raw_kmia_mfs:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/KMIA/KMIA_mfs.csv
+
+raw_kord_mfs:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/KORD/KORD_mfs.csv
+
+raw_kphx_mfs:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/KPHX/KPHX_mfs.csv
+
+raw_ksea_mfs:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/KSEA/KSEA_mfs.csv
+
+
+# MFS features
+features_katl_mfs:
+  type: pandas.ParquetDataSet
+  filepath: data/04_feature/features_katl_mfs.pq
+
+features_kclt_mfs:
+  type: pandas.ParquetDataSet
+  filepath: data/04_feature/features_kclt_mfs.pq
+
+features_kden_mfs:
+  type: pandas.ParquetDataSet
+  filepath: data/04_feature/features_kden_mfs.pq
+
+features_kdfw_mfs:
+  type: pandas.ParquetDataSet
+  filepath: data/04_feature/features_kdfw_mfs.pq
+
+features_kjfk_mfs:
+  type: pandas.ParquetDataSet
+  filepath: data/04_feature/features_kjfk_mfs.pq
+
+features_kmem_mfs:
+  type: pandas.ParquetDataSet
+  filepath: data/04_feature/features_kmem_mfs.pq
+
+features_kmia_mfs:
+  type: pandas.ParquetDataSet
+  filepath: data/04_feature/features_kmia_mfs.pq
+
+features_kord_mfs:
+  type: pandas.ParquetDataSet
+  filepath: data/04_feature/features_kord_mfs.pq
+
+features_kphx_mfs:
+  type: pandas.ParquetDataSet
+  filepath: data/04_feature/features_kphx_mfs.pq
+
+features_ksea_mfs:
+  type: pandas.ParquetDataSet
+  filepath: data/04_feature/features_ksea_mfs.pq
+
+
+# TBFM raw data
+
+raw_katl_tbfm:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/KATL/KATL_tbfm.csv
+  load_args:
+    parse_dates: ["timestamp", "scheduled_runway_estimated_time"]
+
+raw_kclt_tbfm:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/KCLT/KCLT_tbfm.csv
+  load_args:
+    parse_dates: ["timestamp", "scheduled_runway_estimated_time"]
+
+raw_kden_tbfm:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/KDEN/KDEN_tbfm.csv
+  load_args:
+    parse_dates: ["timestamp", "scheduled_runway_estimated_time"]
+
+raw_kdfw_tbfm:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/KDFW/KDFW_tbfm.csv
+  load_args:
+    parse_dates: ["timestamp", "scheduled_runway_estimated_time"]
+
+raw_kjfk_tbfm:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/KJFK/KJFK_tbfm.csv
+  load_args:
+    parse_dates: ["timestamp", "scheduled_runway_estimated_time"]
+
+raw_kmem_tbfm:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/KMEM/KMEM_tbfm.csv
+  load_args:
+    parse_dates: ["timestamp", "scheduled_runway_estimated_time"]
+
+raw_kmia_tbfm:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/KMIA/KMIA_tbfm.csv
+  load_args:
+    parse_dates: ["timestamp", "scheduled_runway_estimated_time"]
+
+raw_kord_tbfm:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/KORD/KORD_tbfm.csv
+  load_args:
+    parse_dates: ["timestamp", "scheduled_runway_estimated_time"]
+
+raw_kphx_tbfm:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/KPHX/KPHX_tbfm.csv
+  load_args:
+    parse_dates: ["timestamp", "scheduled_runway_estimated_time"]
+
+raw_ksea_tbfm:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/KSEA/KSEA_tbfm.csv
+  load_args:
+    parse_dates: ["timestamp", "scheduled_runway_estimated_time"]
+
+# TBFM features
+features_katl_tbfm:
+  type: pandas.ParquetDataSet
+  filepath: data/04_feature/features_katl_tbfm.pq
+
+features_kclt_tbfm:
+  type: pandas.ParquetDataSet
+  filepath: data/04_feature/features_kclt_tbfm.pq
+
+features_kden_tbfm:
+  type: pandas.ParquetDataSet
+  filepath: data/04_feature/features_kden_tbfm.pq
+
+features_kdfw_tbfm:
+  type: pandas.ParquetDataSet
+  filepath: data/04_feature/features_kdfw_tbfm.pq
+
+features_kjfk_tbfm:
+  type: pandas.ParquetDataSet
+  filepath: data/04_feature/features_kjfk_tbfm.pq
+
+features_kmem_tbfm:
+  type: pandas.ParquetDataSet
+  filepath: data/04_feature/features_kmem_tbfm.pq
+
+features_kmia_tbfm:
+  type: pandas.ParquetDataSet
+  filepath: data/04_feature/features_kmia_tbfm.pq
+
+features_kord_tbfm:
+  type: pandas.ParquetDataSet
+  filepath: data/04_feature/features_kord_tbfm.pq
+
+features_kphx_tbfm:
+  type: pandas.ParquetDataSet
+  filepath: data/04_feature/features_kphx_tbfm.pq
+
+features_ksea_tbfm:
+  type: pandas.ParquetDataSet
+  filepath: data/04_feature/features_ksea_tbfm.pq
+
+
+# Labels
+raw_katl_labels:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/KATL/train_labels_KATL.csv
+  load_args:
+    parse_dates: [ "timestamp" ]
+
+raw_kclt_labels:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/KCLT/train_labels_KCLT.csv
+  load_args:
+    parse_dates: [ "timestamp" ]
+
+raw_kden_labels:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/KDEN/train_labels_KDEN.csv
+  load_args:
+    parse_dates: [ "timestamp" ]
+
+raw_kdfw_labels:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/KDFW/train_labels_KDFW.csv
+  load_args:
+    parse_dates: [ "timestamp" ]
+
+raw_kjfk_labels:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/KJFK/train_labels_KJFK.csv
+  load_args:
+    parse_dates: [ "timestamp" ]
+
+raw_kmem_labels:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/KMEM/train_labels_KMEM.csv
+  load_args:
+    parse_dates: [ "timestamp" ]
+
+raw_kmia_labels:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/KMIA/train_labels_KMIA.csv
+  load_args:
+    parse_dates: [ "timestamp" ]
+
+raw_kord_labels:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/KORD/train_labels_KORD.csv
+  load_args:
+    parse_dates: [ "timestamp" ]
+
+raw_kphx_labels:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/KPHX/train_labels_KPHX.csv
+  load_args:
+    parse_dates: [ "timestamp" ]
+
+raw_ksea_labels:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/KSEA/train_labels_KSEA.csv
+  load_args:
+    parse_dates: [ "timestamp" ]
+
+
+# Raw Runways
+raw_katl_runways:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/KATL/KATL_runways.csv
+  load_args:
+    parse_dates: ["timestamp", "departure_runway_actual_time", "arrival_runway_actual_time"]
+
+raw_kclt_runways:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/KCLT/KCLT_runways.csv
+  load_args:
+    parse_dates: ["timestamp", "departure_runway_actual_time", "arrival_runway_actual_time"]
+
+raw_kden_runways:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/KDEN/KDEN_runways.csv
+  load_args:
+    parse_dates: ["timestamp", "departure_runway_actual_time", "arrival_runway_actual_time"]
+
+raw_kdfw_runways:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/KDFW/KDFW_runways.csv
+  load_args:
+    parse_dates: ["timestamp", "departure_runway_actual_time", "arrival_runway_actual_time"]
+
+raw_kjfk_runways:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/KJFK/KJFK_runways.csv
+  load_args:
+    parse_dates: ["timestamp", "departure_runway_actual_time", "arrival_runway_actual_time"]
+
+raw_kmem_runways:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/KMEM/KMEM_runways.csv
+  load_args:
+    parse_dates: ["timestamp", "departure_runway_actual_time", "arrival_runway_actual_time"]
+
+raw_kmia_runways:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/KMIA/KMIA_runways.csv
+  load_args:
+    parse_dates: ["timestamp", "departure_runway_actual_time", "arrival_runway_actual_time"]
+
+raw_kord_runways:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/KORD/KORD_runways.csv
+  load_args:
+    parse_dates: ["timestamp", "departure_runway_actual_time", "arrival_runway_actual_time"]
+
+raw_kphx_runways:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/KPHX/KPHX_runways.csv
+  load_args:
+    parse_dates: ["timestamp", "departure_runway_actual_time", "arrival_runway_actual_time"]
+
+raw_ksea_runways:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/KSEA/KSEA_runways.csv
+  load_args:
+    parse_dates: ["timestamp", "departure_runway_actual_time", "arrival_runway_actual_time"]
+
+# Runway Features
+features_katl_runways:
+  type: pandas.ParquetDataSet
+  filepath: data/04_feature/features_katl_runways.pq
+
+features_kclt_runways:
+  type: pandas.ParquetDataSet
+  filepath: data/04_feature/features_kclt_runways.pq
+
+features_kden_runways:
+  type: pandas.ParquetDataSet
+  filepath: data/04_feature/features_kden_runways.pq
+
+features_kdfw_runways:
+  type: pandas.ParquetDataSet
+  filepath: data/04_feature/features_kdfw_runways.pq
+
+features_kjfk_runways:
+  type: pandas.ParquetDataSet
+  filepath: data/04_feature/features_kjfk_runways.pq
+
+features_kmem_runways:
+  type: pandas.ParquetDataSet
+  filepath: data/04_feature/features_kmem_runways.pq
+
+features_kmia_runways:
+  type: pandas.ParquetDataSet
+  filepath: data/04_feature/features_kmia_runways.pq
+
+features_kord_runways:
+  type: pandas.ParquetDataSet
+  filepath: data/04_feature/features_kord_runways.pq
+
+features_kphx_runways:
+  type: pandas.ParquetDataSet
+  filepath: data/04_feature/features_kphx_runways.pq
+
+features_ksea_runways:
+  type: pandas.ParquetDataSet
+  filepath: data/04_feature/features_ksea_runways.pq
+
+
+# Raw TFM data
+raw_katl_tfm:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/KATL/KATL_tfm.csv
+  load_args:
+    parse_dates: ["timestamp", "arrival_runway_estimated_time"]
+
+raw_kclt_tfm:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/KCLT/KCLT_tfm.csv
+  load_args:
+    parse_dates: ["timestamp", "arrival_runway_estimated_time"]
+
+raw_kden_tfm:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/KDEN/KDEN_tfm.csv
+  load_args:
+    parse_dates: ["timestamp", "arrival_runway_estimated_time"]
+
+raw_kdfw_tfm:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/KDFW/KDFW_tfm.csv
+  load_args:
+    parse_dates: ["timestamp", "arrival_runway_estimated_time"]
+
+raw_kjfk_tfm:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/KJFK/KJFK_tfm.csv
+  load_args:
+    parse_dates: ["timestamp", "arrival_runway_estimated_time"]
+
+raw_kmem_tfm:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/KMEM/KMEM_tfm.csv
+  load_args:
+    parse_dates: ["timestamp", "arrival_runway_estimated_time"]
+
+raw_kmia_tfm:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/KMIA/KMIA_tfm.csv
+  load_args:
+    parse_dates: ["timestamp", "arrival_runway_estimated_time"]
+
+raw_kord_tfm:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/KORD/KORD_tfm.csv
+  load_args:
+    parse_dates: ["timestamp", "arrival_runway_estimated_time"]
+
+raw_kphx_tfm:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/KPHX/KPHX_tfm.csv
+  load_args:
+    parse_dates: ["timestamp", "arrival_runway_estimated_time"]
+
+raw_ksea_tfm:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/KSEA/KSEA_tfm.csv
+  load_args:
+    parse_dates: ["timestamp", "arrival_runway_estimated_time"]
+
+# TFM features
+features_katl_tfm:
+  type: pandas.ParquetDataSet
+  filepath: data/04_feature/features_katl_tfm.pq
+
+features_kclt_tfm:
+  type: pandas.ParquetDataSet
+  filepath: data/04_feature/features_kclt_tfm.pq
+
+features_kden_tfm:
+  type: pandas.ParquetDataSet
+  filepath: data/04_feature/features_kden_tfm.pq
+
+features_kdfw_tfm:
+  type: pandas.ParquetDataSet
+  filepath: data/04_feature/features_kdfw_tfm.pq
+
+features_kjfk_tfm:
+  type: pandas.ParquetDataSet
+  filepath: data/04_feature/features_kjfk_tfm.pq
+
+features_kmem_tfm:
+  type: pandas.ParquetDataSet
+  filepath: data/04_feature/features_kmem_tfm.pq
+
+features_kmia_tfm:
+  type: pandas.ParquetDataSet
+  filepath: data/04_feature/features_kmia_tfm.pq
+
+features_kord_tfm:
+  type: pandas.ParquetDataSet
+  filepath: data/04_feature/features_kord_tfm.pq
+
+features_kphx_tfm:
+  type: pandas.ParquetDataSet
+  filepath: data/04_feature/features_kphx_tfm.pq
+
+features_ksea_tfm:
+  type: pandas.ParquetDataSet
+  filepath: data/04_feature/features_ksea_tfm.pq
+
+
+
+
+
+

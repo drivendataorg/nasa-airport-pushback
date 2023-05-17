@@ -1,0 +1,11 @@
+pydantic==1.10.11
+flwr==1.4.0
+matplotlib==3.7.1
+numpy==1.23.5
+pandarallel==1.6.4
+pandas==1.5.3
+scikit_learn==1.2.2
+seaborn==0.12.2
+torch==2.0.0
+tqdm==4.65.0
+tensorflow==2.12.0

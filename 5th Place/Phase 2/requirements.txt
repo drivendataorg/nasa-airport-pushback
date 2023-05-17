@@ -1,0 +1,7 @@
+loguru==0.7.0
+flwr==1.4.0
+numpy==1.23.5
+pandas==1.5.3
+scikit-learn==1.2.0
+torch==2.0.0
+xgboost==1.7.1

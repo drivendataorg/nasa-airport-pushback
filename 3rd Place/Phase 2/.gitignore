@@ -1,0 +1,23 @@
+Data_Old/
+# Ignore directories named 'Data'
+Data/
+
+# Ignore directories named 'Inference_Extracted_Features'
+Inference_Extracted_Features/
+
+# Ignore directories named 'Inference_Predictions'
+Inference_Predictions/
+
+# Ignore directories named 'Models'
+Models/
+
+# Ignore directories names 'Training_Extracted_Features'
+Training_Extracted_Features/
+
+# Ignore directories named '__pycache__'
+__pycache__/
+
+.DS_Store
+*.pkl
+*.csv
+*.csv.bz2

@@ -1,0 +1,5 @@
+*.csv
+*.bz2
+*.pq
+*.pickle
+*.parquet

@@ -1,0 +1,17 @@
+[tool.kedro]
+package_name = "pushback_nasa"
+project_name = "Pushback NASA"
+project_version = "0.18.4"
+
+[tool.isort]
+profile = "black"
+
+[tool.pytest.ini_options]
+addopts = """
+--cov-report term-missing \
+--cov src/pushback_nasa -ra"""
+
+[tool.coverage.report]
+fail_under = 0
+show_missing = true
+exclude_lines = ["pragma: no cover", "raise NotImplementedError"]
